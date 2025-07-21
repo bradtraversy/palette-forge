@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Color Palette Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="fas fa-palette"></i> Color Palette Generator</h1>
+      <p class="subtitle">
+        Generate beautiful color palettes and copy them with a click!
+      </p>
+
+      <div class="controls">
+        <div class="palette-type">
+          <select id="paletteType">
+            <option value="monochromatic" selected>Monochromatic</option>
+            <option value="complementary">Complementary</option>
+            <option value="analogous">Analogous</option>
+            <option value="triadic">Triadic</option>
+            <option value="tetradic">Tetradic</option>
+            <option value="split-complementary">Split-Complementary</option>
+            <option value="shades">Shades</option>
+            <option value="random">Random</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" id="generateBtn">
+          <i class="fas fa-magic"></i> Generate Palette
+        </button>
+        <button class="btn btn-secondary" id="copyAllBtn">
+          <i class="fas fa-copy"></i> Copy All
+        </button>
+      </div>
+
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+      </div>
+
+      <div class="palette" id="palette">
+        <!-- Color cards will be generated here -->
+      </div>
+    </div>
+
+    <div class="copy-notification" id="copyNotification">
+      <i class="fas fa-check"></i>
+      <span id="copyMessage">Color copied!</span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
